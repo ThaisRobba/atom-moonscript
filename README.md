@@ -1,4 +1,4 @@
 atom-moonscript
 ===============
 
-Moonscript syntax highlighting for Atom!
+Adds syntax highlighting to Moonscript files in Atom
