@@ -1,0 +1,13 @@
+'.source.moon':
+  '-> function':
+    'prefix': 'fun'
+    'body': '${1:FunctionName} = $2 ->\n\t$0'
+  '=> function':
+    'prefix': 'sfun'
+    'body': '${1:FunctionName} = $2 =>\n\t$0'
+  '-> function':
+    'prefix': '->'
+    'body': '${1:FunctionName} = $2 ->\n\t$0'
+  '=> function':
+    'prefix': '=>'
+    'body': '${1:FunctionName} = $2 =>\n\t$0'
