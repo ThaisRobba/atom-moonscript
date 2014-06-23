@@ -1,0 +1,31 @@
+{
+  "name": "language-moonscript",
+  "version": "0.1.0",
+  "private": true,
+  "author": {
+    "name": "Otto Robba",
+    "email": "ottorobba@gmail.com"
+  },
+  "description": "Add syntax highlighting to Moonscript files in Atom",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OttoRobba/atom-moonscript"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.50.0"
+  },
+  "dependencies": {},
+  "readme": "Adds Moonscript language support in Atom with basic syntax highlighting",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/OttoRobba/atom-moonscript/issues"
+  },
+  "homepage": "https://github.com/OttoRobba/atom-moonscript/",
+  "_id": "language-moonscript@0.1.0",
+  "dist": {
+    "shasum": "b3a8524778dd31490032d136f8a73acf47e5f0ef"
+  },
+  "_resolved": "/tmp/d-11449-2568-6hbjy6/package.tgz",
+  "_from": "/tmp/d-11449-2568-6hbjy6/package.tgz"
+}
