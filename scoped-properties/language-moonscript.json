@@ -1,0 +1,9 @@
+{
+  ".source.moon": {
+    "editor": {
+      "commentStart": "--",
+      "increaseIndentPattern": "\\b(else|elseif|then|do|repeat|switch|class|with|when)\\b((?!end).)*$|\\{\\s*|\\[\\s*|\\->|=>|\\w+\\s*\\=\\s*$",
+      "decreaseIndentPattern": "^\\s*(elseif|else|\\}|\\])\\s*$"
+    }
+  }
+}
