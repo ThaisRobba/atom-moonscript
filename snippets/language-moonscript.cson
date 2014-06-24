@@ -1,0 +1,72 @@
+{
+  ".source.moon": {
+    "Array Comprehension": {
+      "prefix": "forin",
+      "body": "for ${1:name} in ${2:array}"
+    },
+    "Function": {
+      "prefix": "fun",
+      "body": "${1:FunctionName} = $2 ->\n\t$0"
+    },
+    "Closure OOP": {
+      "prefix": "new",
+      "body": "${1:tableName}.new = $2 ->\n\t@ = {}\n\t$0\n\treturn @"
+    },
+    "Function(self)": {
+      "prefix": "funs",
+      "body": "${1:FunctionName} = $2 =>\n\t$0"
+    },
+    "Function Lambda": {
+      "prefix": "->",
+      "body": "${1:FunctionName} = $2 ->\n\t$0"
+    },
+    "Function Lambda(self)": {
+      "prefix": "=>",
+      "body": "${1:FunctionName} = $2 =>\n\t$0"
+    },
+    "class ...": {
+      "prefix": "cla",
+      "body": "class ${1:ClassName}\n\t$0"
+    },
+    "class ... extends ...": {
+      "prefix": "clax",
+      "body": "class ${1:ClassName} extends ${2:ParentClass}\n\t$0"
+    },
+    "if": {
+      "prefix": "if",
+      "body": "if ${1:condition}\n\t$0"
+    },
+    "elseif": {
+      "prefix": "elif",
+      "body": "elseif ${1:condition}\n\t$0"
+    },
+    "if .. else": {
+      "prefix": "ife",
+      "body": "if ${1:condition}\n\t$2\nelse\n\t$0"
+    },
+    "for ... in pairs ...": {
+      "prefix": "forp",
+      "body": "for ${1:k}, ${2:v} in pairs ${3:table}\n\t$0"
+    },
+    "for ... in ipairs ...": {
+      "prefix": "fori",
+      "body": "for ${1:i}, ${2:v} in ipairs ${3:table}\n\t$0"
+    },
+    "Switch": {
+      "prefix": "swi",
+      "body": "switch ${1:object}\n\twhen ${2:value}\n\t\t$0"
+    },
+    "Ternary if": {
+      "prefix": "ifte",
+      "body": "if ${1:condition} then ${2:value} else ${3:other}"
+    },
+    "Unless": {
+      "prefix": "unl",
+      "body": "${1:action} unless ${2:condition}"
+    },
+    "Subheader": {
+      "prefix": "--",
+      "body": "----------------------------------\n-- $0\n----------------------------------"
+    }
+  }
+}
