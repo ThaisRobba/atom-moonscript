@@ -19,8 +19,4 @@
   "readme": "# MoonScript language support in Atom\nAdds syntax highlighting and snippets to Moonscript files in Atom.\nOriginally based on [Atom's default coffeescript syntax files](https://github.com/atom/language-coffee-script).\nContributions are greatly appreciated. Please fork this repository and open a pull request to add snippets, make grammar tweaks, etc.",
   "readmeFilename": "README.md",
   "_id": "language-moonscript@0.1.0",
-  "dist": {
-    "shasum": "3c609f766f6efd1e8fcb7fa7d2b153bdccbcd955"
-  },
-  "_from": "/home/andrei/.atom/.node-gyp/.atom/.apm/language-coffee-script/0.22.0/package.tgz"
 }
