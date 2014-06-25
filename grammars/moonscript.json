@@ -22,10 +22,6 @@
       "name": "meta.inline.function.moon"
     },
     {
-      "match": "(\\w+\\s*\\:)",
-      "name": "variable.name.moon"
-    },
-    {
       "captures": {
         "1": {
           "name": "entity.name.type.class"
