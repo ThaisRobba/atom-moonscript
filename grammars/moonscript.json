@@ -71,7 +71,7 @@
     },
 
     {
-      "begin": "(?<!-)--(?!-)",
+      "begin": "(?<!-)--",
       "captures": {
         "0": {
           "name": "punctuation.definition.comment.moon"
