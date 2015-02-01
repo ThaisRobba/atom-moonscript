@@ -1,8 +1,8 @@
 {
   ".source.moon": {
     "editor": {
-      "commentStart": "--",
-      "increaseIndentPattern": "\\b(else|elseif|then|do|repeat|switch|class|with|when)\\b((?!end).)*$|\\{\\s*|\\[\\s*|\\->|=>|\\w+\\s*\\=\\s*$",
+      "commentStart": "-- ",
+      "increaseIndentPattern": "\\b(if|for|while|unless|else|elseif|then|do|repeat|switch|class|with|when)\\b.*$|(\\{\\s*|\\[\\s*|\\->|=>|\\w+\\s*\\=\\s*|\\w+\\s*:\\s*)$",
       "decreaseIndentPattern": "^\\s*(elseif|else|\\}|\\])\\s*$"
     }
   }
