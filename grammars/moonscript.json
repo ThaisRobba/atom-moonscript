@@ -69,7 +69,21 @@
         }
       ]
     },
-
+    {
+      "begin": "\\[\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.moon"
+        }
+      },
+      "end": "\\]\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.moon"
+        }
+      },
+      "name": "string.quoted.other.multiline.moon"
+    },
     {
       "begin": "(?<!-)--",
       "captures": {
