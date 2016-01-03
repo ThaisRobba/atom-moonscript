@@ -206,7 +206,7 @@
       "name": "support.function.moon"
     },
     {
-      "match": "(\\@?\\w+((?=!|\\s*\\(|\\s*\\'|\\s*\"))|\\s*\\(|\\)|!)",
+      "match": "@?[A-Za-z_]\\w+(?=\\(|!|[ ]+(\"|'|\\{|-?(?!if|then|else|elseif|export|import|from|and|or|not|with|for|in|while|return|unless|continue|break|local)\\w+))",
       "name": "support.function.moon"
     },
     {
