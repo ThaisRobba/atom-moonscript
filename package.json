@@ -1,5 +1,5 @@
 {
-  "version": "1.7.0",
+  "version": "1.7.1",
   "name": "language-moonscript",
   "description": "MoonScript language support in Atom",
   "license": "MIT",
