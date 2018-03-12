@@ -338,13 +338,8 @@
     "variable_name": {
       "patterns": [
         {
-          "captures": {
-            "1": {
-              "name": "variable.assignment.moon"
-            }
-          },
-          "match": "([a-zA-Z\\$_]\\w*(\\.\\w+)*)",
-          "name": "variable.assignment.moon"
+          "name": "variable.assignment.moon",
+          "match": "[a-zA-Z\\$_]\\w*(\\.\\w+)*"
         }
       ]
     },
