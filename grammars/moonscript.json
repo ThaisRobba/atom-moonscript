@@ -222,16 +222,73 @@
       "name": "meta.delimiter.method.period.moon"
     },
     {
-      "match": "\\{|\\}",
-      "name": "meta.brace.curly.moon"
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.brace.curly.moon"
+        }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.curly.moon"
+        }
+      },
+      "patterns": [
+        {
+          "include": "$self"
+        }
+      ]
     },
     {
-      "match": "\\(|\\)",
-      "name": "meta.brace.round.moon"
+      "begin": "\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.brace.round.moon"
+        }
+      },
+      "end": "\\)",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.round.moon"
+        }
+      },
+      "patterns": [
+        {
+          "include": "$self"
+        }
+      ]
     },
     {
-      "match": "\\[|\\]\\s*",
-      "name": "meta.brace.square.moon"
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.brace.square.moon"
+        }
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.square.moon"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#variable_name"
+        },
+        {
+          "include": "#instance_variable"
+        },
+        {
+          "include": "#numeric"
+        },
+        {
+          "include": "#single_quoted_string"
+        },
+        {
+          "include": "#double_quoted_string"
+        }
+      ]
     },
     {
       "include": "#instance_variable"
