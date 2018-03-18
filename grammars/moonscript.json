@@ -403,7 +403,7 @@
       "patterns": [
         {
           "name": "variable.assignment.moon",
-          "match": "[a-zA-Z\\$_]\\w*(\\.\\w+)*"
+          "match": "[a-zA-Z\\$_]\\w*(\\.[a-zA-Z\\$_]\\w*)*"
         }
       ]
     },
