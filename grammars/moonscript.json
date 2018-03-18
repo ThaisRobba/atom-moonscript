@@ -230,6 +230,9 @@
       "include": "#instance_variable"
     },
     {
+      "include": "#variable_name"
+    },
+    {
       "include": "#string"
     },
     {
