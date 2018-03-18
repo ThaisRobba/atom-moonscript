@@ -218,6 +218,26 @@
       "name": "meta.delimiter.method.period.moon"
     },
     {
+      "include": "#table"
+    },
+    {
+      "include": "#parens"
+    },
+    {
+      "include": "#brackets"
+    },
+    {
+      "include": "#instance_variable"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#numeric"
+    }
+  ],
+  "repository": {
+    "table": {
       "begin": "\\{",
       "beginCaptures": {
         "0": {
@@ -236,7 +256,7 @@
         }
       ]
     },
-    {
+    "parens": {
       "begin": "\\(",
       "beginCaptures": {
         "0": {
@@ -255,7 +275,7 @@
         }
       ]
     },
-    {
+    "brackets": {
       "begin": "\\[",
       "beginCaptures": {
         "0": {
@@ -286,17 +306,6 @@
         }
       ]
     },
-    {
-      "include": "#instance_variable"
-    },
-    {
-      "include": "#string"
-    },
-    {
-      "include": "#numeric"
-    }
-  ],
-  "repository": {
     "string": {
       "patterns": [
         {
