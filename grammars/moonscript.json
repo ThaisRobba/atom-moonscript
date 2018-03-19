@@ -117,6 +117,18 @@
       }
     },
     {
+      "comment": "tbl = :a, :b   (no curly braces)",
+      "match": "(:)([a-zA-Z\\$_](?:\\w|\\$)*)(?=,|$)",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.moon"
+        },
+        "2": {
+          "name": "variable.assignment.moon"
+        }
+      }
+    },
+    {
       "captures": {
         "1": {
           "name": "variable.assignment.moon"
