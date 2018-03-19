@@ -99,6 +99,24 @@
       "name": "invalid.illegal.moon"
     },
     {
+      "comment": ":a, :b = tbl   (no curly braces)",
+      "match": "(:)([a-zA-Z\\$_](?:\\w|\\$)*)\\s*(,)?(?=.*(:|=(?!=)|[%\\+\\-\\*\\/]=|and=|or=|\\.\\.=))",
+      "captures": {
+        "1": {
+          "name": "keyword.operator.moon"
+        },
+        "2": {
+          "name": "variable.assignment.moon"
+        },
+        "3": {
+          "name": "meta.delimiter.comma.moon"
+        },
+        "4": {
+          "name": "keyword.operator.moon"
+        }
+      }
+    },
+    {
       "captures": {
         "1": {
           "name": "variable.assignment.moon"
