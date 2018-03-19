@@ -11,19 +11,6 @@
     {
       "captures": {
         "1": {
-          "name": "variable.parameter.function.moon"
-        },
-        "2": {
-          "name": "storage.type.function.moon"
-        }
-      },
-      "comment": "match stuff like: a -> … ",
-      "match": "(\\([^()]*?\\))?\\s*([=-]>)",
-      "name": "meta.inline.function.moon"
-    },
-    {
-      "captures": {
-        "1": {
           "name": "entity.name.type.class"
         }
       },
@@ -152,28 +139,8 @@
         }
       ]
     },
-
     {
-      "captures": {
-        "1": {
-          "name": "entity.name.function.moon"
-        },
-        "2": {
-          "name": "entity.name.function.moon"
-        },
-        "3": {
-          "name": "variable.parameter.function.moon"
-        },
-        "4": {
-          "name": "storage.type.function.moon"
-        }
-      },
-      "match": "(?x)\n\t\t\t\t(?<=^|\\s)\n\t\t\t\t(?=@?[a-zA-Z\\$_])\n\t\t\t\t(\n\t\t\t\t\t@?[a-zA-Z\\$_](\\w|\\$|:|\\.)*\\s*\n\t\t\t\t\t(?=[:=](\\s*\\(.*\\))?\\s*([=-]>))\n\t\t\t\t)\n\t\t\t",
-      "name": "meta.function.moon"
-    },
-    {
-      "match": "[=-]>",
-      "name": "storage.type.function.moon"
+      "include": "#function"
     },
     {
       "match": "\\b(?<!\\.)(true|false|nil)(?!\\s*[:=])\\b",
@@ -357,6 +324,40 @@
               "include": "#interpolated_moon"
             }
           ]
+        }
+      ]
+    },
+    "function": {
+      "patterns": [
+        {
+          "comment": "Function parameters",
+          "begin": "\\((?=[^\n]+\\)\\s*[=-]>)",
+          "beginCaptures": {
+            "0": {
+              "name": "meta.brace.round.moon"
+            }
+          },
+          "end": "\\)",
+          "endCaptures": {
+            "0": {
+              "name": "meta.brace.round.moon"
+            }
+          },
+          "name": "meta.function.parameters.moon",
+          "patterns": [
+            {
+              "match": "([^,\\s]+)(?=\\)|,)",
+              "name": "variable.parameter.function.moon"
+            },
+            {
+              "match": ",",
+              "name": "meta.delimiter.comma.moon"
+            }
+          ]
+        },
+        {
+          "match": "[=-]>",
+          "name": "storage.type.function.moon"
         }
       ]
     },
