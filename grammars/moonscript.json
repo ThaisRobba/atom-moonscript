@@ -241,44 +241,6 @@
     }
   ],
   "repository": {
-    "table": {
-      "begin": "\\{",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.brace.curly.moon"
-        }
-      },
-      "end": "\\}",
-      "endCaptures": {
-        "0": {
-          "name": "meta.brace.curly.moon"
-        }
-      },
-      "patterns": [
-        {
-          "include": "$self"
-        }
-      ]
-    },
-    "parens": {
-      "begin": "\\(",
-      "beginCaptures": {
-        "0": {
-          "name": "meta.brace.round.moon"
-        }
-      },
-      "end": "\\)",
-      "endCaptures": {
-        "0": {
-          "name": "meta.brace.round.moon"
-        }
-      },
-      "patterns": [
-        {
-          "include": "$self"
-        }
-      ]
-    },
     "brackets": {
       "begin": "\\[",
       "beginCaptures": {
@@ -307,57 +269,6 @@
         },
         {
           "include": "#string"
-        }
-      ]
-    },
-    "string": {
-      "patterns": [
-        {
-          "comment": "single quoted strings",
-          "begin": "'",
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.moon"
-            }
-          },
-          "end": "'",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.moon"
-            }
-          },
-          "name": "string.quoted.single.moon",
-          "patterns": [
-            {
-              "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
-              "name": "constant.character.escape.moon"
-            }
-          ]
-        },
-        {
-          "comment": "double quoted strings",
-          "begin": "\"",
-          "beginCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.begin.moon"
-            }
-          },
-          "end": "\"",
-          "endCaptures": {
-            "0": {
-              "name": "punctuation.definition.string.end.moon"
-            }
-          },
-          "name": "string.quoted.double.moon",
-          "patterns": [
-            {
-              "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)",
-              "name": "constant.character.escape.moon"
-            },
-            {
-              "include": "#interpolated_moon"
-            }
-          ]
         }
       ]
     },
@@ -422,15 +333,104 @@
         }
       ]
     },
-    "operator": {
-      "name": "keyword.operator.moon",
-      "match": "~=|%|\\^|\\*|\\/|(\\-)?\\-(?!>)|\\+|==|=(?!>)|!=|<=|>=|\\.\\.=|<|>|\\.\\.(\\.)?|\\||\\|\\|\\*=|(?<!\\()/=|%=|\\+=|\\-=|\\b(?<![\\.\\$])(and|or|not)(?!\\s*:)\\b"
-    },
     "numeric": {
       "patterns": [
         {
           "match": "(?<!\\$)\\b((0([box])[0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?(e[+\\-]?[0-9]+)?))\\b",
           "name": "constant.numeric.moon"
+        }
+      ]
+    },
+    "operator": {
+      "name": "keyword.operator.moon",
+      "match": "~=|%|\\^|\\*|\\/|(\\-)?\\-(?!>)|\\+|==|=(?!>)|!=|<=|>=|\\.\\.=|<|>|\\.\\.(\\.)?|\\||\\|\\|\\*=|(?<!\\()/=|%=|\\+=|\\-=|\\b(?<![\\.\\$])(and|or|not)(?!\\s*:)\\b"
+    },
+    "parens": {
+      "begin": "\\(",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.brace.round.moon"
+        }
+      },
+      "end": "\\)",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.round.moon"
+        }
+      },
+      "patterns": [
+        {
+          "include": "$self"
+        }
+      ]
+    },
+    "string": {
+      "patterns": [
+        {
+          "comment": "single quoted strings",
+          "begin": "'",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.moon"
+            }
+          },
+          "end": "'",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.moon"
+            }
+          },
+          "name": "string.quoted.single.moon",
+          "patterns": [
+            {
+              "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]?|37[0-7]?|[4-7][0-7]?|.)",
+              "name": "constant.character.escape.moon"
+            }
+          ]
+        },
+        {
+          "comment": "double quoted strings",
+          "begin": "\"",
+          "beginCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.begin.moon"
+            }
+          },
+          "end": "\"",
+          "endCaptures": {
+            "0": {
+              "name": "punctuation.definition.string.end.moon"
+            }
+          },
+          "name": "string.quoted.double.moon",
+          "patterns": [
+            {
+              "match": "\\\\(x\\h{2}|[0-2][0-7]{,2}|3[0-6][0-7]|37[0-7]?|[4-7][0-7]?|.)",
+              "name": "constant.character.escape.moon"
+            },
+            {
+              "include": "#interpolated_moon"
+            }
+          ]
+        }
+      ]
+    },
+    "table": {
+      "begin": "\\{",
+      "beginCaptures": {
+        "0": {
+          "name": "meta.brace.curly.moon"
+        }
+      },
+      "end": "\\}",
+      "endCaptures": {
+        "0": {
+          "name": "meta.brace.curly.moon"
+        }
+      },
+      "patterns": [
+        {
+          "include": "$self"
         }
       ]
     },
